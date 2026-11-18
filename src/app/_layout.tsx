@@ -1,18 +1,37 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from "expo-router";
+import { useEffect } from "react";
+import * as Notifications from "expo-notifications";
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+export default function RootLayout() {
+  useEffect (() => {
+    Notifications.setNotificationHandler({
+      handleNotification: async ()=> ({
+        shouldShowAlert: true,
+        shouldPlaySound: true,
+        shouldSetBadge: false,
+        shouldShowBanner: true,
+        shouldShowList: true
+      }),
+    });
+  },[]);
 
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen
+       name="(tabs)"
+       options= {{headerShown: false}}
+       />
+
+       <Stack.Screen
+        name="details"
+        options={{
+          title: "Plant Details",
+          headerStyle: {
+            backgroundColor: "#e8f5e9",
+          },
+          headerTintColor: "#245c36",
+        }}
+        />
+    </Stack>
   );
 }

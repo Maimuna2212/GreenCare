@@ -113,3 +113,7 @@ The expected outcome is a functional and user-friendly mobile application that h
 10. Conclution
 
 GreenCare provides a simple mobile solution for supporting basic plant-care activities. Through this project, concepts such as React Native components, navigation, state management, persistent local storage and local notifications are applied in developing a practical mobile application.
+
+
+##Screen recording vedio 
+https://youtu.be/xdYWdgCav-U?si=T4YModCzh2hvi5gT

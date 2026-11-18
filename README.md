@@ -1,56 +1,115 @@
-# Welcome to your Expo app 👋
+1. Project Description
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+GreenCare is a mobile application developed using React Native and Expo. It is designed to help users learn about plants and manage their basic plant-care activities.
 
-## Get started
+The application provides information about different plants, allows users to save their favorite plants, and helps them remember plant-care activities through local notifications.
 
-1. Install dependencies
+ 2. Objectives
 
-   ```bash
-   npm install
-   ```
+- To provide basic information about different plants.
+- To help users understand plant watering and sunlight requirements.
+- To allow users to search for plants.
+- To enable users to save and manage their favorite plants.
+- To provide reminders for plant-care activities.
+- To develop a user-friendly mobile application using React Native.
 
-2. Start the app
+  3. Main Features
 
-   ```bash
-   npx expo start
-   ```
+### Home
+- Displays a collection of plants.
+- Provides a search function to find plants.
+- Allows users to add plants to their favorites.
+- Displays basic application status information.
 
-In the output, you'll find options to open the app in a
+### Plant Details
+- Displays detailed information about selected plants.
+- Provides watering requirements.
+- Provides sunlight requirements.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Favorites
+- Displays the user's favorite plants.
+- Allows users to remove plants from favorites.
+- Saves favorite plants using local storage.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Reminders
+- Allows users to enter a plant name and reminder message.
+- Allows users to schedule local notifications.
+- Provides an option to cancel scheduled reminders.
+- Displays basic plant-care tips.
 
-## Get a fresh project
+  4. Technologies Used
 
-When you're ready, run:
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Visual Studio Code
 
-```bash
-npm run reset-project
-```
+5. Packages and Libraries
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- expo-router – For screen navigation.
+- @expo/vector-icons – For application icons.
+- @react-native-async-storage/async-storage – For storing favorite plants locally.
+- expo-notifications – For scheduling local notifications.
 
-### Other setup steps
+6. Application Navigation
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+The application contains four main screens:
 
-## Learn more
+1. Home
+2. Plant Details
+3. Favorites
+4. Reminders
 
-To learn more about developing your project with Expo, look at the following resources:
+The Home, Favorites and Reminders screens are accessible through bottom-tab navigation. The Plant Details screen is opened by selecting a plant.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
+7. Storage and Notifications
 
-Join our community of developers creating universal apps.
+GreenCare uses AsyncStorage to save users' favorite plant IDs locally on the device. This allows favorite plants to remain saved when the application is closed and reopened.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The application uses Expo Notifications to schedule local reminders for plant-care activities.
+
+ 8. Installation and Execution
+
+### Step 1: Install Node.js
+
+Install Node.js on your computer.
+
+### Step 2: Open the Project
+
+Open the GreenCare project folder using Visual Studio Code.
+
+### Step 3: Install Dependencies
+
+Open the terminal and run:
+
+bash
+npm install
+
+
+Install the required Expo packages if they are not already installed:
+
+bash
+npx expo install expo-router @expo/vector-icons @react-native-async-storage/async-storage expo-notifications
+
+
+### Step 4: Start the Application
+
+Run the following command:
+
+bash
+npx expo start
+
+
+### Step 5: Run on a Mobile Device
+
+Install Expo Go on an Android device and scan the QR code displayed in the terminal or browser to run the application.
+
+9. Expected Outcome
+
+The expected outcome is a functional and user-friendly mobile application that helps users access basic plant information, organize favorite plants and receive reminders for plant-care activities.
+
+10. Conclution
+
+GreenCare provides a simple mobile solution for supporting basic plant-care activities. Through this project, concepts such as React Native components, navigation, state management, persistent local storage and local notifications are applied in developing a practical mobile application.
